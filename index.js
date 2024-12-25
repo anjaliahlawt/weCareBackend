@@ -7,7 +7,11 @@ const app = express();
 app.use(express.json());
 const { v4: uuidV4 } = require("uuid")
 
-app.use(cors())
+app.use(cors({
+    origin: '*',  // This allows requests from all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization']  // Allowed headers
+}));
 
 const { sendEmail } = require("./nodemailer/sendingEmail")
 
