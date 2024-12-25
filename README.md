@@ -83,6 +83,14 @@ email : pococare@gmail.com  password : pococare
 | GET | api/appointments/docapp/:id | To get the appointments based on specific Doctor | 200
 | GET | api/appointments/patapp/:id | To get the appointments based on specific Patient | 200
 
+# Coomand to run docker file
+
+| build docker image :- docker build -t image_name .
+| run docker container :- docker run -d --restart=always --name container_name -p 3000:3000 --env-file .env image_name
+
+
+
+
 
 
 
